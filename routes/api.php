@@ -1,7 +1,9 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,11 @@ Route::group([
     Route::post('me', 'AuthController@me');
 
 });
+
+// se agregaron las rutas para el jwt
+Route::group(['middleware'=>'api','prefix'=>'auth'],function($router){
+    Route::post('/register',[AuthController::class,'register']);
+    Route::post('/login',[AuthController::class,'login']);
+});
+
+
