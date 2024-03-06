@@ -31,7 +31,7 @@ class AuthController extends Controller {
 
         $user = User::create(array_merge(
              $validator->validated(),
-            ['password'=>bcrypt($request->password)]
+            // ['password'=>bcrypt($request->password)] // hash en lugar de bcryt por  modelo.
         ));
 
         return response()->json([
@@ -47,6 +47,7 @@ class AuthController extends Controller {
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required|string|min:6',
+
         ]);
 
         if($validator->fails()){
