@@ -7,6 +7,20 @@ use Illuminate\Http\Request;
 
 class VentasAuditoriaController extends Controller
 {
+    VentasAuditoria::create([
+
+        'audit_id'=>$auditoria-> audit_id,
+        'lead_id'=>$auditoria->lead_id,
+        'sponsor'=> $auditoria->sponsor,
+        'status_name'=>$auditoria->status_name,
+        'phone_number'=>$auditoria->phone_number,
+        'first_name'=>$auditoria->irst_name,
+        'middle_name'=>$auditoria->middle_name,
+        'last_name'=>$auditoria->last_name,
+        'timestamps'=>$auditoria->timestamps,
+    ]);
+
+
     /**
      * Display a listing of the resource.
      */

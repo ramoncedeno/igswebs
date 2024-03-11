@@ -12,11 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ventas_verificadas', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
 
 
-
+                $table-> integer ('confirmation_id');
+                $table-> integer ('audit_id');
+                $table-> integer ('lead_id');
+                $table-> integer ('vendor_lead_code');
+                $table-> string ('status_name');
+                $table-> string ('comments');
         });
     }
 

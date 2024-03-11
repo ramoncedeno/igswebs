@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('ventas_auditorias', function (Blueprint $table) {
 
-            $table-> bigIncrements ('lead_id');
+            $table-> bigIncrements ('audit_id');
+            $table-> intenger    ('lead_id');
+            $table-> string ('sponsor' );
+            $table-> string ('status_name');
+            $table-> intenger    ('phone_numbe');
+            $table-> string ('first_name');
+            $table-> string ('middle_name');
+            $table-> string  ('last_name');
             $table-> timestamps ();
-
         });
     }
 
