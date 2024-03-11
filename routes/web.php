@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/','welcome');
+Route::view('/igswebs','igswebs');
 
-Route::get('/tmk', function () {
-    return view('igswelcome');
-});
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/tmk', function () {
+//     return view('igswelcome');
+// });
 
