@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\VentasTmk;
+use App\Models\VentasVicidial;
 use Illuminate\Http\Request;
 
-class VentasTmkController extends Controller
+class VentasVicidialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class VentasTmkController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(VentasTmk $ventasTmk)
+    public function show(VentasVicidial $ventasVicidial)
     {
         //
     }
@@ -42,7 +42,7 @@ class VentasTmkController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(VentasTmk $ventasTmk)
+    public function edit(VentasVicidial $ventasVicidial)
     {
         //
     }
@@ -50,7 +50,7 @@ class VentasTmkController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, VentasTmk $ventasTmk)
+    public function update(Request $request, VentasVicidial $ventasVicidial)
     {
         //
     }
@@ -58,7 +58,7 @@ class VentasTmkController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(VentasTmk $ventasTmk)
+    public function destroy(VentasVicidial $ventasVicidial)
     {
         //
     }

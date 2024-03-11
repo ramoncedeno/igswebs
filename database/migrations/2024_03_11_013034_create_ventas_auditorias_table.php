@@ -12,8 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ventas_auditorias', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+
+            $table-> bigIncrements ('lead_id');
+            $table-> timestamps ();
+
         });
     }
 

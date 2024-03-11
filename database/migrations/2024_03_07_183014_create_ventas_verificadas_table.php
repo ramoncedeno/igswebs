@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('ventas_verificadas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+
+
         });
     }
 
