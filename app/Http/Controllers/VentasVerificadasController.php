@@ -9,13 +9,6 @@ class VentasVerificadasController extends Controller
 {
 
 
-    'confirmation_id'->$confirmation-> confirmacion_id,
-    'audit_id'->$confirmation->audit_id,
-    'lead_id'->$confirmation->lead_id,
-    'vendor_lead_code'->$confirmation->vendor_lead,
-    'status_name'->$confirmation->clasification,
-    'comments'->$confirmation->comment,
-
     /**
      * Display a listing of the resource.
      */

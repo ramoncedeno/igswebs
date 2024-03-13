@@ -14,22 +14,24 @@ return new class extends Migration
     {
         Schema::create('ventas_vicidials', function (Blueprint $table) {
 
-            $table->id();
-            $table-> integer ('vendor_lead_code');
-            $table-> string ('code_country');
-            $table-> string ('sponsor');
+            $table->comment('In this table all sales made by TMK in vicidial will be recorded');
+            $table->id()->unsigned();
+            $table-> string ('sponsor','50');
+            $table-> string ('vendor_lead_code','60');
             $table-> dateTimeTz ('call_date');
-            $table-> integer ('campaign_id');
-            $table-> integer ('user_tmk');
-            $table-> integer ('phone_number');
+            $table-> text ('campaign_id','10');
+            $table-> text ('user_id','50');
+            $table-> text ('user_name');
+            $table-> string ('phone_number','10');
             $table-> string ('status_name');
             $table-> string ('first_name varchar');
             $table-> string ('middle_name varchar');
             $table-> string ('last_name');
+            $table->string ('lead_id','50');
             $table-> string ('comments');
-            $table-> string ('recording_filename');
-            $table-> text ('recording_location varchar');
+            $table-> text ('server');
             $table->timestamps();
+
         });
     }
 

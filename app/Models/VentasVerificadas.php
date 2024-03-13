@@ -8,4 +8,33 @@ use Illuminate\Database\Eloquent\Model;
 class VentasVerificadas extends Model
 {
     use HasFactory;
+
+
+    public $fillable = [
+
+        'sponsor',
+        'status_name',
+        'phone_number',
+        'first_name',
+        'middle_name',
+        'last_name',
+        'comments',
+    ];
+
+    public $protected =[
+
+        'phone_number',
+        'first_name',
+        'middle_name',
+        'last_name',
+    ];
+
+
+    protected $casts = [
+
+        'phone_number'=> 'Encrypted',
+        'first_name'=>'Encrypted' ,
+        'middle_name'=>'Encrypted',
+        'last_name'=>'Encrypted',
+    ];
 }

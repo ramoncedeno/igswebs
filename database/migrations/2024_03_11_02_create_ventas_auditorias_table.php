@@ -13,16 +13,23 @@ return new class extends Migration
     {
         Schema::create('ventas_auditorias', function (Blueprint $table) {
 
-            $table-> bigIncrements ('audit_id');
-            $table-> intenger    ('lead_id');
-            $table-> string ('sponsor' );
-            $table-> string ('status_name');
-            $table-> intenger    ('phone_numbe');
+            $table->comment(' In this table the quality validation process and confirmation of the sale will be carried out');
+            $table->id()->unsigned();
+            $table-> bigInteger ('id_vicidial')-> unsigned();
+            $table-> string ('sponsor');
+            $table-> text ('status_name');
+            $table-> string ('phone_number','10');
             $table-> string ('first_name');
             $table-> string ('middle_name');
-            $table-> string  ('last_name');
+            $table-> string ('last_name');
+            $table-> text ('comments');
             $table-> timestamps ();
+
+            $table->foreign('id_vicidial')->references('id')->on('ventas_vicidials');
+
+
         });
+
     }
 
     /**
